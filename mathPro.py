@@ -43,4 +43,30 @@ b=18
 print("{}和{}的最大公约数：{}".format(a,b,gcd(a,b)))
 
 def gcd2(a,b):
-    
+    pass
+
+# 最小公倍数
+
+def mcm(a,b):
+    '''
+        循环遍历求解最小公倍数
+    '''
+    for i in range(1,b+1):
+        if i*a%b ==0:
+            return i*a
+a=76
+b=18
+print("{}和{}的最小公倍数：{}".format(a,b,mcm(a,b)))
+
+
+# 斐波那契数列
+def Fibo(n):
+    if n==1 or n==2:
+        return 1
+    num = Fibo(n-1)+Fibo(n-2)
+    # print(num)
+    return num
+
+
+for i in range(1,20):
+    print(Fibo(i))
